@@ -1,0 +1,180 @@
+.placemarker {
+  position: fixed;
+  --width: clamp(200px, 20.1vw, 20.1vw);
+  width: var(--width);
+  margin-right: 2vw;
+  right: 0;
+  height: 4vh;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+  background-color: rgb(47, 47, 47, 0.5);
+  border-radius: 2vh;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+.biggerplacemarker {
+  position: fixed;
+  width: clamp(70vh, 50vw, 50vw);
+  margin-right: 2vw;
+  right: 0;
+  height: 7vh;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+  font-size: 2.5vh;
+  background-color: rgb(47, 47, 47);
+  pointer-events: auto;
+  border-radius: 3.5vh;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+.mobileplacemarker {
+  position: fixed;
+  width: 90vw;
+  height: 7vh;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5vh;
+  background-color: rgb(47, 47, 47, 0.5);
+  pointer-events: auto;
+  border-radius: 3.5vh;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+
+.submit {
+  position: fixed;
+  width: clamp(200px, 20.1vw, 20.1vw);
+  cursor: pointer;
+  height: 4vh;
+  margin-right: 2vw;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+  background-color: rgb(0, 95, 0, 0.5);
+  border-radius: 2vh;
+  color: #e3e3e3;
+}
+.biggersubmit {
+  position: fixed;
+  width: clamp(70vh, 50vw, 50vw);
+  height: 7vh;
+  margin-right: 2vw;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+  font-size: 3vh;
+  background-color: rgb(0, 95, 0);
+  pointer-events: auto;
+  border-radius: 3.5vh;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+.mobilesubmit {
+  position: fixed;
+  width: 90vw;
+  height: 7vh;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vh;
+  background-color: rgb(0, 95, 0, 0.5);
+  pointer-events: auto;
+  border-radius: 3.5vh;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+.biggerplacemarker:active,
+.biggersubmit:active,
+.biggerplacemarker:active,
+.mobileplacemarker:active,
+.mobilesubmit:active {
+  transform: scale(0.97);
+}
+.biggerplacemarker:hover,
+.biggersubmit:hover,
+.biggerplacemarker:hover,
+.mobileplacemarker:hover,
+.mobilesubmit:hover {
+  transform: scale(1.05);
+}
+.outsideofmap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  opacity: 0;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2vh, 1.5vw, 1.5vw);
+}
+
+.ingamedetails {
+  position: fixed;
+  width: clamp(12vh, 15vw, 50vh);
+  height: clamp(2vw, 10vh, 12vw);
+  background-color: rgb(15, 15, 15, 0.8);
+  margin-top: 10vh;
+  right: 0;
+  font-size: clamp(1.3vh, 1vw, 1vw);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.totalscore {
+  left: 80%;
+  transform: translatex(-50%);
+  bottom: 1vh;
+  position: absolute;
+}
+
+.tournumber {
+  position: absolute;
+  left: 20%;
+  transform: translatex(-50%);
+  bottom: 1vh;
+}
+.totalscoreinfo {
+  position: absolute;
+  left: 80%;
+  transform: translatex(-50%);
+  margin-top: 1vh;
+}
+.tournumberinfo {
+  position: absolute;
+  left: 20%;
+  transform: translatex(-50%);
+  margin-top: 1vh;
+}
+.timerprogress {
+  position: fixed;
+  width: clamp(14vh, 10vw, 200px);
+  height: clamp(20vh, 4vw, 200px);
+  z-index: -4;
+  position: absolute;
+  top: 7%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.timerdiv {
+  position: fixed;
+
+  width: clamp(13vh, 9.55vw, 200px);
+  height: clamp(3vh, 2.2vw, 200px);
+  background-color: rgba(25, 25, 25, 0.7);
+  border-radius: 2.5vh;
+  top: 7%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}

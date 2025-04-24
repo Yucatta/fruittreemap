@@ -114,6 +114,12 @@ const MapandSubmit = () => {
     initializeMap();
   }, []);
   useEffect(() => {
+    if (mapRef.current) {
+      mapRef.current.panTo(mapCenter);
+      mapRef.current.invalidateSize();
+    }
+  }, [mapCenter]);
+  useEffect(() => {
     if (aspectRatio < 0.85 && !isitmobile.current) {
       const mapcenter = mapRef.current?.getCenter();
       isitmobile.current = true;
@@ -131,7 +137,7 @@ const MapandSubmit = () => {
         setSubmitClassName(styles.mobileplacemarker);
       }
       if (mapcenter) {
-        // setMapCenter([mapcenter.lat, mapcenter.lng]);
+        setMapCenter([mapcenter.lat, mapcenter.lng]);
       }
     } else if (isitmobile && aspectRatio > 0.85) {
       const mapcenter = mapRef.current?.getCenter();
@@ -143,7 +149,7 @@ const MapandSubmit = () => {
         marginBottom: "5vh",
       } as React.CSSProperties);
       if (mapcenter) {
-        // setMapCenter([mapcenter.lat, mapcenter.lng]);
+        setMapCenter([mapcenter.lat, mapcenter.lng]);
       }
       if (ismarkeronmap.current) {
         setSubmitClassName(styles.submit);
@@ -169,7 +175,7 @@ const MapandSubmit = () => {
       }
       setTimeout(() => {
         if (mapcenter) {
-          // setMapCenter([mapcenter.lat, mapcenter.lng]);
+          setMapCenter([mapcenter.lat, mapcenter.lng]);
         }
       }, 300);
       clearTimeout(timeforshrink);
@@ -193,7 +199,7 @@ const MapandSubmit = () => {
           setSubmitClassName(styles.placemarker);
         }
         if (mapcenter) {
-          // setMapCenter([mapcenter.lat, mapcenter.lng]);
+          setMapCenter([mapcenter.lat, mapcenter.lng]);
         }
       }, 700);
     }
@@ -214,7 +220,7 @@ const MapandSubmit = () => {
       setSubmitClassName(styles.placemarker);
     }
     if (mapcenter) {
-      // setMapCenter([mapcenter.lat, mapcenter.lng]);
+      setMapCenter([mapcenter.lat, mapcenter.lng]);
     }
   }
 
